@@ -28,6 +28,8 @@
         <main>
           <Image />
           <Education />
+          <Employment />
+          <Contact />
         </main>
       </div>
     )
@@ -59,17 +61,34 @@
   function Employment() {
     return(
       <div>
-
+      <h2> Employment </h2>
+      <ul>
+        <Job company= 'Circus' years= '5' job= 'Snake Charmer' description= 'learned how to control snakes with music and npr'/>
+        <Job company= 'Google' years= '7' job= 'CEO' description= 'managed employees, accounts and other google related business things'/>
+    </ul>
       </div>
     )
   }
 
   function Job(props) {
     return(
-      <li>Worked at {props.company} for {props.years} in the position {props.job}</li>
+      <li>Worked at {props.company} for {props.years} years in the position {props.job}. What I did at {props.company} was {props.description}. </li>
     )
   }
   
+  function Contact() {
+    return(
+      <div>
+      <h2> Contact information </h2>
+      <ul>
+      <li> Sally Student </li>
+      <li> 478-929-8291 </li>
+      <li> Sally.Student@gmail.com </li>
+      </ul>
+      </div>
+    )
+  }
+
   ReactDOM.render(
     <App />,
     document.querySelector('#application-root')
